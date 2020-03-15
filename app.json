@@ -1,8 +1,7 @@
 {
-	"name": "Heroku aria2c",
-	"description": "Run aria2c on heroku",
-	"repository": "https://github.com/maple3142/heroku-aria2c",
-	"keywords": ["aria2c"],
+	"name": "Heroku cloud backup",
+	"description": "Run cloud sync on heroku",
+	"repository": "https://github.com/xenud/cloud-backup",
 	"env": {
 		"HEROKU_APP_NAME": {
 			"description": "This should be the same as \"App name\" above."
@@ -11,30 +10,29 @@
 			"description": "Aria2c's secret",
 			"value": "DEFAULT_SECRET"
 		},
-		"RCLONE_CONFIG": {
+		"RCLONE_CONFIG_FILE": {
 			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
+			"required": true
+		},
+		"RCLONE_FIRST_COMMAND": {
+			"description": "Command",
 			"required": false
 		},
-		"RCLONE_1ST_REMOTE": {
-			"description": "First remote name",
+		"RCLONE_SECOND_COMMAND": {
+			"description": "Command",
 			"required": false
 		},
-		"RCLONE_1ST_DESTINATION": {
-			"description": "Path to store your file in your Rclone drive. Must start with a forward slash.",
+		"RCLONE_THIRD_COMMAND": {
+			"description": "Command",
 			"required": false
 		},
-		"RCLONE_2ND_REMOTE": {
-			"description": "Second remote name",
+		"RCLONE_FOURTH_COMMAND": {
+			"description": "Command",
 			"required": false
 		},
-		"RCLONE_2ND_DESTINATION": {
-			"description": "Path to store your file in your Rclone drive. Must start with a forward slash.",
+		"RCLONE_FIFTH_COMMAND": {
+			"description": "Command",
 			"required": false
 		}
-	},
-	"buildpacks": [
-		{
-			"url": "heroku/nodejs"
-		}
-	]
+	}
 }
