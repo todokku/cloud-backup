@@ -27,3 +27,6 @@ rclone --config="rclone.conf" sync "chicago:" "crypt-pittsburg:" -P
 
 echo "Clone chicago->charleston..."
 rclone --config="rclone.conf" sync "chicago:" "crypt-charleston:" -P
+
+echo "Clone chicago->cincinnati..."
+rclone --config="rclone.conf" sync "chicago:" "crypt-cincinnati:" -P
