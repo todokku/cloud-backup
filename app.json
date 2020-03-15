@@ -3,13 +3,6 @@
 	"description": "Run cloud sync on heroku",
 	"repository": "https://github.com/xenud/cloud-backup",
 	"env": {
-		"HEROKU_APP_NAME": {
-			"description": "This should be the same as \"App name\" above."
-		},
-		"ARIA2C_SECRET": {
-			"description": "Aria2c's secret",
-			"value": "DEFAULT_SECRET"
-		},
 		"RCLONE_CONFIG_FILE": {
 			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
 			"required": true
