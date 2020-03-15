@@ -6,26 +6,6 @@
 		"RCLONE_CONFIG_FILE": {
 			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
 			"required": true
-		},
-		"RCLONE_FIRST_COMMAND": {
-			"description": "Command",
-			"required": false
-		},
-		"RCLONE_SECOND_COMMAND": {
-			"description": "Command",
-			"required": false
-		},
-		"RCLONE_THIRD_COMMAND": {
-			"description": "Command",
-			"required": false
-		},
-		"RCLONE_FOURTH_COMMAND": {
-			"description": "Command",
-			"required": false
-		},
-		"RCLONE_FIFTH_COMMAND": {
-			"description": "Command",
-			"required": false
 		}
 	},
 	"buildpacks": [

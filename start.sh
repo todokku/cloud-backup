@@ -8,30 +8,22 @@ export PATH=$PWD/rclone-v1.51.0-linux-amd64:$PATH
 echo "Installing rclone..."
 echo $PATH
 
-echo 1
-if [[ -n $RCLONE_CONFIG_FILE && -n $RCLONE_FIRST_COMMAND ]]; then
+if [[ -n $RCLONE_CONFIG_FILE ]]; then
     echo "Rclone config detected"
     echo -e "$RCLONE_CONFIG_FILE" > rclone.conf
 	# RClone Config file 
 fi
-echo 2
+echo "Reading config file..."
 rclone --config="rclone.conf" config
-{
-    eval $RCLONE_FIRST_COMMAND
-}&
-echo 3
-{
-    eval $RCLONE_SECOND_COMMAND
-}&
-echo 4
-{
-    eval $RCLONE_THIRD_COMMAND
-}&
-echo 5
-{
-    eval $RCLONE_FOURTH_COMMAND
-}&
-echo 6
-{
-    eval $RCLONE_FIFTH_COMMAND
-}&
+
+echo "Clone chicago->cleveland..."
+rclone --config="rclone.conf" sync "chicago:" "crypt-cleveland:" -P
+
+echo "Clone chicago->dallas..."
+rclone --config="rclone.conf" sync "chicago:" "crypt-dallas:" -P
+
+echo "Clone chicago->pittsburg..."
+rclone --config="rclone.conf" sync "chicago:" "crypt-pittsburg:" -P
+
+echo "Clone chicago->charleston..."
+rclone --config="rclone.conf" sync "chicago:" "crypt-charleston:" -P
