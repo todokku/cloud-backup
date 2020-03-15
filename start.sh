@@ -6,6 +6,7 @@ if [[ -n $RCLONE_CONFIG_FILE && -n $RCLONE_FIRST_COMMAND ]]; then
 	# RClone Config file 
 fi
 echo 2
+rclone
 {
     eval $RCLONE_FIRST_COMMAND
 }&
