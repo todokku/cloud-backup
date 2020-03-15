@@ -30,7 +30,7 @@
 	},
 	"buildpacks": [
 		{
-			"url": "https://github.com/jeremywrnr/heroku-buildpack-run.git"
+			"url": "heroku/python"
 		}
 	]
 }
