@@ -27,5 +27,10 @@
 			"description": "Command",
 			"required": false
 		}
-	}
+	},
+	"buildpacks": [
+		{
+			"url": "https://github.com/jeremywrnr/heroku-buildpack-run.git"
+		}
+	]
 }
