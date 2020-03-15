@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -n $RCLONE_CONFIG_FILE && -n $RCLONE_1ST_DESTINATION ]]; then
+if [[ -n $RCLONE_CONFIG_FILE && -n $RCLONE_FIRST_COMMAND ]]; then
     echo "Rclone config detected"
     echo -e "$RCLONE_CONFIG_FILE" > rclone.conf
 	# RClone Config file 
