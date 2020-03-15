@@ -4,8 +4,6 @@ if [[ -n $RCLONE_CONFIG_FILE && -n $RCLONE_FIRST_COMMAND ]]; then
     echo "Rclone config detected"
     echo -e "$RCLONE_CONFIG_FILE" > rclone.conf
 	# RClone Config file 
-	RCLONE_CONFIG=rclone.conf
-	export RCLONE_CONFIG
 fi
 echo 2
 {
