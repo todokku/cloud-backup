@@ -5,6 +5,7 @@ const shell = require('shelljs')
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
+  shell.exec('chmod +x start.sh')
   shell.exec('./start.sh')
 });
 
