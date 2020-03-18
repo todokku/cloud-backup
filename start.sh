@@ -14,7 +14,7 @@ if [[ -n $RCLONE_CONFIG_FILE ]]; then
 	# RClone Config file 
 fi
 echo "Reading config file..."
-rclone --config="rclone.conf" config
+rclone --config="rclone.conf" listremotes 
 
 echo "Clone chicago->cleveland..."
 rclone --config="rclone.conf" sync "chicago:" "crypt-cleveland:" -P
