@@ -16,17 +16,20 @@ fi
 echo "Reading config file..."
 rclone --config="rclone.conf" listremotes 
 
+echo "Deduping chicago..."
+rclone dedupe chicago:
+
 echo "Clone chicago->cleveland..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-cleveland:" -P
+rclone --config="rclone.conf" sync "chicago:" "crypt-cleveland:" -P --exclude "*.CKSF"
 
 echo "Clone chicago->dallas..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-dallas:" -P
+rclone --config="rclone.conf" sync "chicago:" "crypt-dallas:" -P --exclude "*.CKSF"
 
 echo "Clone chicago->pittsburg..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-pittsburg:" -P
+rclone --config="rclone.conf" sync "chicago:" "crypt-pittsburg:" -P --exclude "*.CKSF"
 
 echo "Clone chicago->charleston..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-charleston:" -P
+rclone --config="rclone.conf" sync "chicago:" "crypt-charleston:" -P --exclude "*.CKSF"
 
 echo "Clone chicago->cincinnati..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-cincinnati:" -P
+rclone --config="rclone.conf" sync "chicago:" "crypt-cincinnati:" -P --exclude "*.CKSF"
