@@ -17,7 +17,7 @@ echo "Reading config file..."
 rclone --config="rclone.conf" listremotes 
 
 echo "Custom command..."
-eval "'$CUSTOM_COMMAND'"
+eval $CUSTOM_COMMAND
 
 echo "Deduping chicago..."
 rclone --config="rclone.conf" dedupe chicago:
