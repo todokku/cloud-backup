@@ -1,0 +1,127 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>RCLONE CLOUD BACKUP</title>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-11/512/Cloud-icon.png">
+    <link rel="mask-icon" type="" href="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-11/512/Cloud-icon.png" color="#111">
+    <style>
+        body {
+      display: flex;
+      flex-direction: column;
+      height: 93vh;
+      justify-content: center;
+      align-items: center;
+      background: #222;
+      color: #eee;
+      font-family: "Dosis", sans-serif;
+    }
+    
+    .underlined-a {
+      text-decoration: none;
+      color: aqua;
+      padding-bottom: 0.15em;
+      box-sizing: border-box;
+      box-shadow: inset 0 -0.2em 0 aqua;
+      transition: 0.2s;
+    }
+    .underlined-a:hover {
+      color: #222;
+      box-shadow: inset 0 -2em 0 aqua;
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    
+    .brk-btn {
+      position: relative;
+      background: none;
+      color: aqua;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 0.2em solid aqua;
+      padding: 0.5em 1em;
+    }
+    .brk-btn::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10%;
+      background: #222;
+      height: 0.3em;
+      right: 20%;
+      top: -0.21em;
+      transform: skewX(-45deg);
+      -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    .brk-btn::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10%;
+      background: #222;
+      height: 0.3em;
+      left: 20%;
+      bottom: -0.25em;
+      transform: skewX(45deg);
+      -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    .brk-btn:hover::before {
+      right: 80%;
+    }
+    .brk-btn:hover::after {
+      left: 80%;
+    }
+    .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    }
+    .loading-bar {
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    border-radius: 4px;
+    animation: loading 1s ease-in-out infinite;
+    }
+    .loading-bar:nth-child(1) {
+    background-color: aqua;
+    animation-delay: 0;
+    }
+    .loading-bar:nth-child(2) {
+    background-color: aqua;
+    animation-delay: 0.09s;
+    }
+    .loading-bar:nth-child(3) {
+    background-color: aqua;
+    animation-delay: .18s;
+    }
+    .loading-bar:nth-child(4) {
+    background-color: aqua;
+    animation-delay: .27s;
+    }
+
+    @keyframes loading {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1, 2.2);
+    }
+    40% {
+        transform: scale(1);
+    }
+    }
+      </style></head>
+    <body>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
+    <div>RCLONE CLOUD BACKUP <a href="#" class="underlined-a">&nbsp;&nbsp;HAS BEEN STARTED&nbsp;&nbsp;</a></div>
+    <br>
+    <div class="loading">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+    </div>
+    
+    </body></html>
