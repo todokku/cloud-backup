@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 app.get('/start-sync', function (req, res) {
   res.sendFile(path.join(__dirname+'/start-sync.html'));
   shell.exec('chmod +x start.sh');
-  shell.exec('./start.sh');
+  shell.exec('./start.sh', async=true);
 });
 app.listen(PORT, function () {
   console.log(`Listening on ${ PORT }`);
