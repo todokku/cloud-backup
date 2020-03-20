@@ -18,4 +18,4 @@ rclone --config="rclone.conf" listremotes
 
 echo "Sync supertemp->chicago..."
 rclone --config="rclone.conf" sync "chicago:" "supertemp:" -P --exclude "*.CKSF"
-rclone --config="rclone.conf" sync "supertemp:" "chicago:" -P
+#rclone --config="rclone.conf" sync "supertemp:" "chicago:" -P
