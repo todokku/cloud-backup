@@ -17,4 +17,5 @@ echo "Reading config file..."
 rclone --config="rclone.conf" listremotes 
 
 echo "Sync supertemp->chicago..."
-rclone --config="rclone.conf" sync "supertemp:" "chicago:"
+rclone --config="rclone.conf" sync "chicago:" "supertemp:" -P
+rclone --config="rclone.conf" sync "supertemp:" "chicago:" -P
