@@ -19,20 +19,23 @@ rclone --config="rclone.conf" listremotes
 echo "Custom command..."
 eval $CUSTOM_COMMAND
 
-echo "Deduping chicago..."
-rclone --config="rclone.conf" dedupe chicago:
+echo "Deduping tokyo..."
+rclone --config="rclone.conf" dedupe tokyo:
 
-echo "Clone chicago->cleveland..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-cleveland:" -P --exclude "*.CKSF" --exclude "*_FolderZip.zip"
+echo "Clone tokyo->dallas..."
+rclone --config="rclone.conf" sync "tokyo:" "crypt-dallas:" -P
 
-echo "Clone chicago->dallas..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-dallas:" -P --exclude "*.CKSF" --exclude "*_FolderZip.zip"
+echo "Clone tokyo->cincinnati..."
+rclone --config="rclone.conf" sync "tokyo:" "crypt-cincinnati:" -P --exclude "*.CKSF"
 
-echo "Clone chicago->pittsburg..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-pittsburg:" -P --exclude "*.CKSF" --exclude "*_FolderZip.zip"
+echo "Clone tokyo->charleston..."
+rclone --config="rclone.conf" sync "tokyo:" "crypt-charleston:"
 
-echo "Clone chicago->charleston..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-charleston:" -P --exclude "*.CKSF" --exclude "*_FolderZip.zip"
+echo "Clone tokyo->pittsburg..."
+rclone --config="rclone.conf" sync "tokyo:" "crypt-pittsburg:"
 
-echo "Clone chicago->cincinnati..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-cincinnati:" -P --exclude "*.CKSF" --exclude "*_FolderZip.zip"
+echo "Clone tokyo->cleveland..."
+rclone --config="rclone.conf" sync "tokyo:" "crypt-cleveland:" -P --exclude "*.CKSF"
+
+echo "Clone chicago->springfield..."
+rclone --config="rclone.conf" sync "tokyo:" "crypt-springfield:" -P --exclude "*.CKSF"
