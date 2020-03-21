@@ -19,8 +19,8 @@ rclone --config="rclone.conf" listremotes
 echo "Custom command..."
 eval $CUSTOM_COMMAND
 
-echo "Deduping chicago..."
-rclone --config="rclone.conf" dedupe "chicago:"
+#echo "Deduping chicago..."
+#rclone --config="rclone.conf" dedupe "chicago:"
 
 echo "Clone tokyo->dallas..."
 rclone --config="rclone.conf" sync "tokyo:" "crypt-dallas:" -P
