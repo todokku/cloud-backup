@@ -29,13 +29,13 @@ echo "Clone tokyo->cincinnati..."
 rclone --config="rclone.conf" sync "tokyo:" "crypt-cincinnati:" -vv --exclude "*.CKSF"
 
 echo "Clone tokyo->charleston..."
-rclone --config="rclone.conf" sync "tokyo:" "crypt-charleston:"
+rclone --config="rclone.conf" sync "tokyo:" "crypt-charleston:" -vv
 
 echo "Clone tokyo->pittsburg..."
-rclone --config="rclone.conf" sync "tokyo:" "crypt-pittsburg:"
+rclone --config="rclone.conf" sync "tokyo:" "crypt-pittsburg:" -vv
 
 echo "Clone tokyo->cleveland..."
 rclone --config="rclone.conf" sync "tokyo:" "crypt-cleveland:" -vv --exclude "*.CKSF"
 
 echo "Clone chicago->springfield..."
-rclone --config="rclone.conf" sync "tokyo:" "crypt-springfield:" -vv --exclude "*.CKSF"
+rclone --config="rclone.conf" sync "chicago:" "crypt-springfield:" -vv
