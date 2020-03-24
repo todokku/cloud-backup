@@ -22,20 +22,23 @@ eval $CUSTOM_COMMAND
 #echo "Deduping chicago..."
 #rclone --config="rclone.conf" dedupe "chicago:"
 
-echo "Clone tokyo->dallas..."
-rclone --config="rclone.conf" sync "tokyo:" "crypt-dallas:" -vv
+echo "Clone tokyo->dallas..." #GDrive
+rclone --config="rclone.conf" sync "tokyo:" "crypt-dallas:" -v
 
-echo "Clone tokyo->cincinnati..."
-rclone --config="rclone.conf" sync "tokyo:" "crypt-cincinnati:" -vv --exclude "*.CKSF"
+echo "Clone tokyo->cincinnati..." #OneDrive
+rclone --config="rclone.conf" sync "tokyo:" "crypt-cincinnati:" -v --exclude "*.CKSF"
 
-echo "Clone tokyo->charleston..."
-rclone --config="rclone.conf" sync "tokyo:" "crypt-charleston:" -vv
+echo "Clone tokyo->charleston..." #GDrive
+rclone --config="rclone.conf" sync "tokyo:" "crypt-charleston:" -v
 
-echo "Clone tokyo->pittsburg..."
-rclone --config="rclone.conf" sync "tokyo:" "crypt-pittsburg:" -vv
+echo "Clone tokyo->pittsburg..." #GDrive
+rclone --config="rclone.conf" sync "tokyo:" "crypt-pittsburg:" -v
 
-echo "Clone tokyo->cleveland..."
-rclone --config="rclone.conf" sync "tokyo:" "crypt-cleveland:" -vv --exclude "*.CKSF"
+echo "Clone tokyo->cleveland..." #OneDrive
+rclone --config="rclone.conf" sync "tokyo:" "crypt-cleveland:" -v --exclude "*.CKSF"
 
-echo "Clone chicago->springfield..."
-rclone --config="rclone.conf" sync "chicago:" "crypt-springfield:" -vv
+echo "Clone chicago->springfield..." #GDrive
+rclone --config="rclone.conf" sync "chicago:" "crypt-springfield:" -v
+
+echo "Clone chicago->kiev..." #OneDrive
+rclone --config="rclone.conf" sync "chicago:" "crypt-kiev:" -v --exclude "*.CKSF"
