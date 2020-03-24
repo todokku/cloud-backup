@@ -10,7 +10,7 @@ echo $PATH
 
 if [[ -n $RCLONE_CONFIG_FILE ]]; then
     echo "Rclone config detected"
-    echo -e "$RCLONE_CONFIG_FILE" > rclone.conf
+    wget $RCLONE_CONFIG_FILE -O rclone.conf
 	# RClone Config file 
 fi
 echo "Reading config file..."
