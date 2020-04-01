@@ -21,10 +21,8 @@ eval $CUSTOM_COMMAND
 
 #echo "Deduping chicago..."
 #rclone --config="rclone.conf" dedupe "chicago:"
-echo "Clone chicago->tokyo..." #OneDrive
-rclone --config="rclone.conf" move "chicago:" "tokyo:" -vv --exclude "*.CKSF" --exclude "/# Cartelle personali #/**" --drive-acknowledge-abuse
-echo "Sync tokyo->miami for transfer..." #OneDrive
-#rclone --config="rclone.conf" move "tokyo:" "miami:" -vv
+#echo "Clone chicago->tokyo..." #OneDrive
+#rclone --config="rclone.conf" move "chicago:" "tokyo:" -vv --exclude "*.CKSF" --exclude "/# Cartelle personali #/**" --drive-acknowledge-abuse
 
 echo "Clone tokyo->dallas..." #GDrive
 rclone --config="rclone.conf" sync "tokyo:" "crypt-dallas:" -v
@@ -46,3 +44,5 @@ rclone --config="rclone.conf" sync "chicago:" "crypt-springfield:" -v
 
 echo "Clone chicago->kiev..." #OneDrive
 rclone --config="rclone.conf" sync "chicago:" "crypt-kiev:" -v --exclude "*.CKSF"
+
+
